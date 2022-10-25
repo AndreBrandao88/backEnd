@@ -1,0 +1,50 @@
+// Teste de requisições REST - Prestadores
+
+@baseURL = http://localhost:4000/api
+
+//GET - lISTA TODOS 
+
+GET {{baseURL}}/prestadores
+Content-Type: application/json
+
+###
+DELETE - Apaga um pelo id 
+
+//DELETE {{baseURL}}/prestadores/{{id}}
+Content-Type: application/json 
+
+###
+//POST - Inclui um novo prestador 
+
+POST {{baseURL}}/prestadores
+Content-Type: application/json
+
+{
+    "cnpj": "14093149000107",
+    "razao_social": "FOLLOWIZE",
+    "cnae_fiscal": 7500100,
+    "data_inicio_atividade": "2022-02-28"
+
+}
+
+###
+
+//GET - Localiza pela razao 
+
+GET {{baseURL}}/prestadores/razao/follow
+Content-Type: application/json
+
+###
+//PUT - Altera os dados do prestador
+
+PUT {{baseURL}}/prestadores
+Content-Type: application/json
+
+{
+    "_id": "6357210ab365cbff08b1185f",
+    "cnpj": "14093149000107",
+    "razao_social": "FOLLOWIZE II",
+    "cnae_fiscal": 7500100,
+    "data_inicio_atividade": "2022-02-28"
+
+}
